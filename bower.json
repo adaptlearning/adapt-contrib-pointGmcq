@@ -1,0 +1,15 @@
+{
+  "name": "adapt-contrib-pointGmcq",
+  "version": "0.0.1",
+  "homepage": "https://github.com/adaptlearning/adapt-contrib-pointGmcq",
+  "authors": [
+    "Daryl Hedley <darylhedley@hotmail.com>"
+  ],
+  "description": "A variation on the GMCQ component that enables point on an image",
+  "main": "/js/adapt-contrib-pointGmcq.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3"
+}

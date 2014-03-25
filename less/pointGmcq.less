@@ -1,0 +1,178 @@
+.point-gmcq-component {
+
+    .point-gmcq-widget {
+        position:relative;
+    }
+
+    .point-gmcq-item {
+        position: absolute;
+    }
+
+    .point-gmcq-item label {            
+        background-color:@item-text-color;
+        display:block;
+        position: relative;
+        z-index: 1;
+        overflow:hidden;
+        padding:@item-padding;
+        border-radius: 50%;
+        
+        .point-gmcq-answer-icon {
+            color: @item-color;
+            &:before {
+                content: "\e65e";
+            }
+        }
+
+        &.selected {            
+            color: @item-selected-color;
+            background-color:@item-text-selected-color;
+            .point-gmcq-answer-icon{
+                &:before {
+                    content: "\e65d";
+                }
+            }
+        }        
+    }
+
+    .point-gmcq-item-inner {
+        padding:@item-padding;
+        margin-left: 38px;
+    }
+
+    .point-gmcq-item input {
+        position:absolute;
+        top:14px;
+        left:14px;
+    }
+
+    .point-gmcq-correct-icon {
+        color: @icon-correct-color;
+        display: none;
+    }
+
+    .point-gmcq-incorrect-icon {
+        color: @icon-incorrect-color;
+        display: none;
+    }
+
+    .point-gmcq-item-state {
+        width: @icon-size;
+        height: @icon-size;
+    }
+
+    .button {
+        outline: none;
+        text-decoration: none;
+        padding: @button-padding;
+        color: @button-text-color;
+        background-color: @button-color;
+        display: none;
+        clear: both;
+        float:left; 
+        &.submit {
+            display: inline-block;
+            
+        }
+    }
+
+    .point-gmcq-widget {
+
+        &.submitted {
+            .button.submit {
+                display: none;
+            }
+            .button.reset {
+                display: inline-block;
+            }
+        }
+
+        &.user {
+            .button.model {
+                display: inline-block;
+            }
+            .point-gmcq-item-icon {
+                display: none;
+            }
+            .incorrect {
+                .selected .point-gmcq-incorrect-icon {
+                    display: block;
+                }
+            }
+            .correct {
+                .selected .point-gmcq-correct-icon {
+                    display: block;
+                }
+            }
+        }
+
+        &.model {
+            .button.user {
+                display: inline-block;
+            }
+            .point-gmcq-item-icon {
+                display: none;
+            }
+            .selected .point-gmcq-correct-icon {
+                display: block;
+            }
+        }
+
+        &.disabled {
+            .button.reset {
+                display: none;
+            }
+            .point-gmcq-item label.selected.disabled {
+                background-color:@item-selected-color;
+            }
+            .point-gmcq-item label.disabled {
+                background-color:@item-disabled-color; 
+            }
+
+            .point-gmcq-item.correct .selected .state {
+                color:@icon-correct-color;
+            }
+
+            .point-gmcq-item.incorrect .selected .state {
+                color:@icon-incorrect-color;
+            }
+        }
+
+        &.correct {
+            .button {
+                visibility: hidden;
+            }
+        }
+    }
+}
+
+.no-touch {
+
+    .point-gmcq-component {
+
+        .button.submit:hover,
+        .button.reset:hover,
+        .button.user:hover,
+        .button.model:hover {
+            background-color:@button-hover-color;
+            color:@button-text-hover-color;
+        }
+
+        .point-gmcq-widget {
+            &:not(.disabled) {
+                .point-gmcq-item label:hover {
+                    color:@item-text-hover-color;
+                    background-color:@item-hover-color;
+                }
+                .point-gmcq-item label.disabled {
+
+                    background-color:@item-disabled-color;
+                    cursor:default;
+                    &:hover{
+                        background: @item-disabled-color;
+                    }
+                }
+            }
+        }
+    }
+}
