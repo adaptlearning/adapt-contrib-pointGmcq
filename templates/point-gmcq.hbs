@@ -1,6 +1,6 @@
 <div class="point-gmcq-inner component-inner">
     {{> component this}}
-    <div class="point-gmcq-widget component-widget {{#unless _isEnabled}} disabled {{#if _isComplete}} complete submitted user {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
+    <div class="point-gmcq-widget component-widget clearfix {{#unless _isEnabled}} disabled {{#if _isComplete}} complete submitted user {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
         <img class="point-gmcq-image" src="{{graphic.src}}" alt="{{graphic.alt}}"/>
         {{#each items}}
         <div class="point-gmcq-item item {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}" style="top:{{top}}%; left:{{left}}%;">
