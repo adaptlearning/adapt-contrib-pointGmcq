@@ -35,12 +35,25 @@ define(function(require) {
             this.setAllItemsEnabled(true);
         },
 
+        onCannotSubmit: function() {
+            this.showValidationError();
+        },
+
+        showValidationError: function() {
+            this.$(".point-gmcq-item > label").addClass("point-gmcq-validation-error");
+        },
+
+        clearValidationError: function() {
+            this.$(".point-gmcq-item > label").removeClass("point-gmcq-validation-error");
+        },
+
         onItemSelected: function(event) {
             var selectedItemObject = this.model.get('items')[$(event.currentTarget).parent('.point-gmcq-item').index('.point-gmcq-item')];
             
             if(this.model.get('_isEnabled') && !this.model.get('_isSubmitted')){
                 this.toggleItemSelected(selectedItemObject, event);
             }
+            this.clearValidationError();
         },
 
         preRender: function() {
