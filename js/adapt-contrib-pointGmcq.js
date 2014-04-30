@@ -48,7 +48,7 @@ define(function(require) {
         },
 
         onItemSelected: function(event) {
-            var selectedItemObject = this.model.get('items')[$(event.currentTarget).parent('.point-gmcq-item').index('.point-gmcq-item')];
+            var selectedItemObject = this.model.get('_items')[$(event.currentTarget).parent('.point-gmcq-item').index('.point-gmcq-item')];
             
             if(this.model.get('_isEnabled') && !this.model.get('_isSubmitted')){
                 this.toggleItemSelected(selectedItemObject, event);

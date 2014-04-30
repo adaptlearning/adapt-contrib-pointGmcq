@@ -10,38 +10,45 @@
     "_isRandom":false,
     "_selectable":1,
     "title": "Point GMCQ",
+    "displayTitle": "Point GMCQ",
     "body": "Which of the following options would you consider to be correct on the image?",
-    "graphic": {
+    "_graphic": {
         "alt": "alt text",
         "src": "course/en/images/origami-hotgraphic.jpg"
     },
-    "items": [
+    "_items": [
         {
-            "top": 10,
-            "left": 10,
-            "shouldBeSelected":true
+            "_top": 10,
+            "_left": 10,
+            "_shouldBeSelected":true
         },
         {
-            "top": 30,
-            "left": 30,
-            "shouldBeSelected":false
+            "_top": 30,
+            "_left": 30,
+            "_shouldBeSelected":false
         },
         {
-            "top": 50,
-            "left": 50,
-            "shouldBeSelected":false
+            "_top": 50,
+            "_left": 50,
+            "_shouldBeSelected":false
         }
     ],
-    "feedback":{
-        "correct":"Congratulations, this is the correct feedback.",
-        "partly":"This is the partly correct feedback.",
-        "incorrect":"Unfortunately this is the incorrect feedback."
+    "_feedback":{
+        "correct": "Congratulations, this is the correct feedback.",
+        "_incorrect": {
+            "notFinal": "Unfortunately this is the incorrect feedback.",
+            "final": "Unfortunately this is the final incorrect feedback."
+        },
+        "_partlyCorrect": {
+            "notFinal": "This is the partly correct feedback.",
+            "final": "This is the final partly correct feedback."
+        }
     },
-    "buttons":{
-        "submit":"Submit",
-        "reset":"Reset",
-        "showCorrectAnswer":"Model Answer",
-        "hideCorrectAnswer":"Your Answer"
+    "_buttons":{
+        "submit":"",
+        "reset":"",
+        "showCorrectAnswer":"",
+        "hideCorrectAnswer":""
     },
     "_pageLevelProgress": {
         "_isEnabled": true
