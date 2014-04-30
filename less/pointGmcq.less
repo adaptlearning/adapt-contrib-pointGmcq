@@ -66,35 +66,13 @@
     }
 
     .button {
-        outline: none;
-        text-decoration: none;
-        padding: @button-padding;
-        color: @button-text-color;
-        background-color: @button-color;
-        display: none;
         clear: both;
         float:left; 
-        &.submit {
-            display: inline-block;
-            
-        }
     }
 
     .point-gmcq-widget {
 
-        &.submitted {
-            .button.submit {
-                display: none;
-            }
-            .button.reset {
-                display: inline-block;
-            }
-        }
-
         &.user {
-            .button.model {
-                display: inline-block;
-            }
             .point-gmcq-item-icon {
                 display: none;
             }
@@ -111,9 +89,6 @@
         }
 
         &.model {
-            .button.user {
-                display: inline-block;
-            }
             .point-gmcq-item-icon {
                 display: none;
             }
@@ -123,9 +98,6 @@
         }
 
         &.disabled {
-            .button.reset {
-                display: none;
-            }
             .point-gmcq-item label.selected.disabled {
                 background-color:@item-selected-color;
             }
@@ -141,26 +113,12 @@
                 color:@icon-incorrect-color;
             }
         }
-
-        &.correct {
-            .button {
-                visibility: hidden;
-            }
-        }
     }
 }
 
 .no-touch {
 
     .point-gmcq-component {
-
-        .button.submit:hover,
-        .button.reset:hover,
-        .button.user:hover,
-        .button.model:hover {
-            background-color:@button-hover-color;
-            color:@button-text-hover-color;
-        }
 
         .point-gmcq-widget {
             &:not(.disabled) {
