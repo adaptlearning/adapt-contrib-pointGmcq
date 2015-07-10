@@ -4,7 +4,6 @@
   "description": "A variation on the GMCQ component that enables point on an image",
   "main": "",
   "scripts": {
-    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   },
   "repository": {
     "type": "git",
@@ -16,8 +15,5 @@
     "url": "https://github.com/adaptlearning/adapt-contrib-pointGmcq/issues"
   },
   "devDependencies": {
-    "karma": "~0.10",
-    "karma-mocha": "*",
-    "karma-expect": "*"
   }
 }
