@@ -8,7 +8,7 @@
         position: absolute;
     }
 
-    .point-gmcq-item label {            
+    .point-gmcq-item label {
         background-color:@item-text-color;
         display:block;
         position: relative;
@@ -16,7 +16,7 @@
         overflow:hidden;
         padding:@item-padding;
         border-radius: 50%;
-        
+
         .point-gmcq-answer-icon {
             color: @item-color;
             &:before {
@@ -24,7 +24,7 @@
             }
         }
 
-        &.selected {            
+        &.selected {
             color: @item-selected-color;
             background-color:@item-text-selected-color;
             .point-gmcq-answer-icon{
@@ -36,7 +36,7 @@
 
         &.point-gmcq-validation-error {
             outline: 2px solid @validation-error-border-color;
-        }        
+        }
     }
 
     .point-gmcq-item-inner {
@@ -67,12 +67,12 @@
 
     .button {
         clear: both;
-        float:left; 
+        float:left;
     }
 
     .point-gmcq-widget {
 
-        &.user {
+        &.show-user-answer {
             .point-gmcq-item-icon {
                 display: none;
             }
@@ -88,7 +88,7 @@
             }
         }
 
-        &.model {
+        &.show-correct-answer {
             .point-gmcq-item-icon {
                 display: none;
             }
@@ -102,7 +102,7 @@
                 background-color:@item-selected-color;
             }
             .point-gmcq-item label.disabled {
-                background-color:@item-disabled-color; 
+                background-color:@item-disabled-color;
             }
 
             .point-gmcq-item.correct .selected .state {

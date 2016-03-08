@@ -1,10 +1,11 @@
 {
   "name": "adapt-contrib-pointGmcq",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "framework": "^2.0.0",
   "homepage": "https://github.com/adaptlearning/adapt-contrib-pointGmcq",
-  "authors": [
-    "Daryl Hedley <darylhedley@hotmail.com>"
-  ],
+  "issues": "https://github.com/adaptlearning/adapt-contrib-pointGmcq/issues",
+  "displayName" : "Point Graphical Multiple Choice Question",
+  "component" : "point-gmcq",
   "description": "A variation on the GMCQ component that enables point on an image",
   "main": "/js/adapt-contrib-pointGmcq.js",
   "keywords": [
