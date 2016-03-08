@@ -8,7 +8,8 @@ define(function(require) {
         events: {
             'focus .point-gmcq-item input': 'onItemFocus',
             'blur .point-gmcq-item input': 'onItemBlur',
-            'change .point-gmcq-item input': 'onItemSelected'
+            'change .point-gmcq-item input': 'onItemSelected',
+            'keyup .point-gmcq-item input':'onKeyPress'
         },
 
         onQuestionRendered: function() {
