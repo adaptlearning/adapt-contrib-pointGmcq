@@ -56,14 +56,14 @@ define(function(require) {
             this.clearValidationError();
         },
 
-        preRender: function() {
-            Mcq.prototype.preRender.apply(this);
+        setupQuestion: function() {
+            Mcq.prototype.setupQuestion.apply(this);
 
             this.listenTo(Adapt, 'device:changed', this.resizeImage);
         },
 
-        postRender: function() {
-            Mcq.prototype.postRender.apply(this);
+        onQuestionRendered: function() {
+            Mcq.prototype.onQuestionRendered.apply(this);
             
             this.resizeImage(Adapt.device.screenSize);
         },
