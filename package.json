@@ -1,6 +1,6 @@
 {
   "name": "adapt-contrib-pointGmcq",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A variation on the GMCQ component that enables point on an image",
   "main": "",
   "scripts": {
