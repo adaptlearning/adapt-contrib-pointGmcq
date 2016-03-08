@@ -3,15 +3,15 @@
     <div class="point-gmcq-widget component-widget clearfix {{#unless _isEnabled}} disabled {{#if _isComplete}} complete submitted user {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
         <img class="point-gmcq-image" src="{{_graphic.src}}" alt="{{_graphic.alt}}" tabindex="0"/>
         {{#each _items}}
-        <div class="point-gmcq-item component-item {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}" tabindex="0"  style="top:{{_top}}%; left:{{_left}}%;">
-            <label for="{{../_id}}-{{@index}}" class="{{#if _isSelected}}selected{{/if}}">
-                <div class="point-gmcq-item-state a11y-ignore" tabindex="-1">
-                    <div class="point-gmcq-item-icon point-gmcq-answer-icon icon a11y-ignore" tabindex="-1"></div>
-                    <div class="point-gmcq-item-icon point-gmcq-correct-icon icon icon-tick a11y-ignore" tabindex="-1"></div>
-                    <div class="point-gmcq-item-icon point-gmcq-incorrect-icon icon icon-cross a11y-ignore" tabindex="-1"></div>
+        <div class="point-gmcq-item component-item component-item-color {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}" style="top:{{_top}}%; left:{{_left}}%;">
+            <input type="checkbox" id="{{../_id}}-{{@index}}" aria-labelledby="{{../_id}}-{{@index}}-aria"{{#unless ../_isEnabled}} disabled{{/unless}}/>
+            <label aria-hidden="true" id="{{../_id}}-{{@index}}-aria" for="{{../_id}}-{{@index}}" class="component-item-text-color component-item-border{{#unless ../_isEnabled}} disabled {{/unless}}{{#if _isSelected}} selected{{/if}}">
+                <div class="point-gmcq-item-state">
+                    <div class="point-gmcq-item-icon point-gmcq-answer-icon {{#if ../_isRadio}}radio{{else}}checkbox{{/if}} component-item-text-color icon"></div>
+                    <div class="point-gmcq-item-icon point-gmcq-correct-icon icon icon-tick a11y-ignore"></div>
+                    <div class="point-gmcq-item-icon point-gmcq-incorrect-icon icon icon-cross a11y-ignore"></div>
                 </div>
             </label>
-            <input type="checkbox" id="{{../_id}}-{{@index}}" class="a11y-ignore" tabindex="-1"/>
         </div>
         {{/each}}
     </div>
