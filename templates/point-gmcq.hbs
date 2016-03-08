@@ -1,9 +1,9 @@
-<div class="point-gmcq-inner component-inner" role="region">
+<div class="point-gmcq-inner component-inner" role="region" aria-label="{{_globals._components._point-gmcq.ariaRegion}}" {{#if _globals._components._point-gmcq.ariaRegion}}tabindex="0"{{/if}}>
     {{> component this}}
     <div class="point-gmcq-widget component-widget clearfix {{#unless _isEnabled}} disabled {{#if _isComplete}} complete submitted user {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
         <img class="point-gmcq-image" src="{{_graphic.src}}" alt="{{_graphic.alt}}" tabindex="0"/>
         {{#each _items}}
-        <div class="point-gmcq-item item {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}" tabindex="0"  style="top:{{top}}%; left:{{left}}%;">
+        <div class="point-gmcq-item component-item {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}" tabindex="0"  style="top:{{_top}}%; left:{{_left}}%;">
             <label for="{{../_id}}-{{@index}}" class="{{#if _isSelected}}selected{{/if}}">
                 <div class="point-gmcq-item-state a11y-ignore" tabindex="-1">
                     <div class="point-gmcq-item-icon point-gmcq-answer-icon icon a11y-ignore" tabindex="-1"></div>
@@ -14,8 +14,7 @@
             <input type="checkbox" id="{{../_id}}-{{@index}}" class="a11y-ignore" tabindex="-1"/>
         </div>
         {{/each}}
-        <div class="buttons">
-            {{> buttons this}}
-        </div>
+    </div>
+    <div class="buttons">
     </div>
 </div>
