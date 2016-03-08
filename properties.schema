@@ -82,6 +82,30 @@
       "validators": ["number", "required"],
       "help": "How many items are selectable"
     },
+    "_graphic": {
+        "type": "object",
+        "required": false,
+        "title": "Graphic",
+        "properties":{
+          "src": {
+            "type": "string",
+            "required":true,
+            "default": "",
+            "inputType": "Asset:image",
+            "validators": ["required"],
+            "help": "This is the image that appears behind the pins"
+          },
+          "alt": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The alternative text for this image"
+          }
+        }
+      }
+    }
     "_items": {
       "type":"array",
       "required":true,
