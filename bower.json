@@ -2,7 +2,7 @@
     "name": "adapt-contrib-pointGmcq",
     "repository": "git@github.com:adaptlearning/adapt-contrib-pointGmcq.git",
     "framework": "^2.0.0",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "homepage": "https://github.com/adaptlearning/adapt-contrib-pointGmcq",
     "issues": "https://github.com/adaptlearning/adapt-contrib-pointGmcq/issues",
     "displayName": "Point Graphical Multiple Choice Question",
