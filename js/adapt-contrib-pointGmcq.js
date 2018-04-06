@@ -1,7 +1,7 @@
-define(function(require) {
-
-    var Mcq = require('components/adapt-contrib-mcq/js/adapt-contrib-mcq');
-    var Adapt = require('coreJS/adapt');
+define([
+    'core/js/adapt',
+    'components/components/adapt-contrib-mcq/js/adapt-contrib-mcq'
+], function(Adapt, Mcq) {
 
     var PointGmcq = Mcq.extend({
 
@@ -13,9 +13,9 @@ define(function(require) {
         },
 
         onQuestionRendered: function() {
-            this.$('img').imageready(_.bind(function() {
+            this.$('img').imageready(function() {
                 this.setReadyStatus();
-            }, this));
+            }.bind(this));
         },
 
         canReset: function() {
@@ -32,11 +32,11 @@ define(function(require) {
         },
 
         showValidationError: function() {
-            this.$(".point-gmcq-item > label").addClass("point-gmcq-validation-error");
+            this.$('.point-gmcq-item > label').addClass('point-gmcq-validation-error');
         },
 
         clearValidationError: function() {
-            this.$(".point-gmcq-item > label").removeClass("point-gmcq-validation-error");
+            this.$('.point-gmcq-item > label').removeClass('point-gmcq-validation-error');
         },
 
         onItemSelected: function(event) {
@@ -49,11 +49,9 @@ define(function(require) {
         }
 
     }, {
-        'template': 'point-gmcq'
+        template: "point-gmcq"
     });
 
-    Adapt.register("point-gmcq", PointGmcq);
-
-    return PointGmcq;
+    return Adapt.register("point-gmcq", PointGmcq);
 
 });
