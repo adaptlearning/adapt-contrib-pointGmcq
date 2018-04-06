@@ -1,6 +1,6 @@
 define([
     'core/js/adapt',
-    'components/components/adapt-contrib-mcq/js/adapt-contrib-mcq'
+    'components/adapt-contrib-mcq/js/adapt-contrib-mcq'
 ], function(Adapt, Mcq) {
 
     var PointGmcq = Mcq.extend({
