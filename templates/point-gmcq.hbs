@@ -1,20 +1,20 @@
 <div class="point-gmcq-inner component-inner" role="region" aria-label="{{_globals._components._point-gmcq.ariaRegion}}" {{#if _globals._components._point-gmcq.ariaRegion}}tabindex="0"{{/if}}>
-    {{> component this}}
-    <div class="point-gmcq-widget component-widget clearfix {{#unless _isEnabled}} disabled {{#if _isComplete}} complete submitted user {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
-        <img class="point-gmcq-image" src="{{_graphic.src}}" alt="{{_graphic.alt}}" tabindex="0"/>
-        {{#each _items}}
-        <div class="point-gmcq-item component-item component-item-color {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}" style="top:{{_top}}%; left:{{_left}}%;">
-            <input type="checkbox" id="{{../_id}}-{{@index}}" aria-labelledby="{{../_id}}-{{@index}}-aria"{{#unless ../_isEnabled}} disabled{{/unless}}/>
-            <label aria-hidden="true" id="{{../_id}}-{{@index}}-aria" for="{{../_id}}-{{@index}}" class="component-item-text-color component-item-border{{#unless ../_isEnabled}} disabled {{/unless}}{{#if _isSelected}} selected{{/if}}">
-                <div class="point-gmcq-item-state">
-                    <div class="point-gmcq-item-icon point-gmcq-answer-icon {{#if ../_isRadio}}radio{{else}}checkbox{{/if}} component-item-text-color icon"></div>
-                    <div class="point-gmcq-item-icon point-gmcq-correct-icon icon icon-tick a11y-ignore"></div>
-                    <div class="point-gmcq-item-icon point-gmcq-incorrect-icon icon icon-cross a11y-ignore"></div>
-                </div>
-            </label>
+  {{> component this}}
+  <div class="point-gmcq-widget component-widget clearfix {{#unless _isEnabled}} disabled {{#if _isComplete}} complete submitted user {{#if _isCorrect}}correct{{/if}} {{/if}} {{/unless}}">
+    <img class="point-gmcq-image" src="{{_graphic.src}}" alt="{{_graphic.alt}}" tabindex="0"/>
+    {{#each _items}}
+    <div class="point-gmcq-item component-item component-item-color {{#unless ../_isEnabled}} {{#if _isCorrect}}correct{{else}}incorrect{{/if}} {{/unless}} item-{{@index}}" style="top:{{_top}}%; left:{{_left}}%;">
+      <input type="checkbox" id="{{../_id}}-{{@index}}" aria-labelledby="{{../_id}}-{{@index}}-aria"{{#unless ../_isEnabled}} disabled{{/unless}}/>
+      <label aria-hidden="true" id="{{../_id}}-{{@index}}-aria" for="{{../_id}}-{{@index}}" class="component-item-text-color component-item-border{{#unless ../_isEnabled}} disabled {{/unless}}{{#if _isSelected}} selected{{/if}}">
+        <div class="point-gmcq-item-state">
+          <div class="point-gmcq-item-icon point-gmcq-answer-icon {{#if ../_isRadio}}radio{{else}}checkbox{{/if}} component-item-text-color icon"></div>
+          <div class="point-gmcq-item-icon point-gmcq-correct-icon icon icon-tick a11y-ignore"></div>
+          <div class="point-gmcq-item-icon point-gmcq-incorrect-icon icon icon-cross a11y-ignore"></div>
         </div>
-        {{/each}}
+      </label>
     </div>
-    <div class="buttons">
-    </div>
+    {{/each}}
+  </div>
+  <div class="buttons">
+  </div>
 </div>

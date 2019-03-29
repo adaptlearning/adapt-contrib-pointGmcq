@@ -1,17 +1,17 @@
 {
-    "name": "adapt-contrib-pointGmcq",
-    "repository": "git@github.com:adaptlearning/adapt-contrib-pointGmcq.git",
-    "framework": ">=2",
-    "version": "2.0.3",
-    "homepage": "https://github.com/adaptlearning/adapt-contrib-pointGmcq",
-    "issues": "https://github.com/adaptlearning/adapt-contrib-pointGmcq/issues",
-    "displayName": "Point Graphical Multiple Choice Question",
-    "component": "point-gmcq",
-    "description": "A variation on the GMCQ component that enables point on an image",
-    "main": "/js/adapt-contrib-pointGmcq.js",
-    "keywords": [
-        "adapt-plugin",
-        "adapt-component"
-    ],
-    "license": "GPLv3"
+  "name": "adapt-contrib-pointGmcq",
+  "repository": "git@github.com:adaptlearning/adapt-contrib-pointGmcq.git",
+  "framework": ">=2",
+  "version": "2.0.3",
+  "homepage": "https://github.com/adaptlearning/adapt-contrib-pointGmcq",
+  "issues": "https://github.com/adaptlearning/adapt-contrib-pointGmcq/issues",
+  "displayName": "Point Graphical Multiple Choice Question",
+  "component": "point-gmcq",
+  "description": "A variation on the GMCQ component that enables point on an image",
+  "main": "/js/adapt-contrib-pointGmcq.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPLv3"
 }
