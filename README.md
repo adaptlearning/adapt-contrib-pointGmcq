@@ -1,5 +1,7 @@
 # adapt-contrib-pointGmcq
 
+!!DEPRECATED!!
+
 A variation on the GMCQ component that enables point on an image
 
 ## Installation
